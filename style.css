@@ -355,12 +355,7 @@ body, html{
     .pimg2,.pimg4{
       background-size: contain;
       background-repeat: no-repeat;
-  }
-
-#website{
-    display: none;
-  }
-  
+  }  
   @media (width: 300px) {
     .navbar {
         max-height: auto;
@@ -369,4 +364,7 @@ body, html{
         justify-content: space-around;
     }
   }
+}
+#website{
+  display: none;
 }
