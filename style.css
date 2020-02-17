@@ -12,7 +12,6 @@ body, html{
 .parallax{
     height:800px;
     background-color:#282e34;
-    z-index: 4;
 }
 .front,.back{
     position: absolute;
@@ -21,11 +20,11 @@ body, html{
     z-index: 0;
 }
 .front{
-    top: 26%;
+    top: 10%;
     z-index: 2;
 }
 .back{
-    top: 6%;
+    top: 5%;
     z-index: 1;
 }
 .personalinfo{
