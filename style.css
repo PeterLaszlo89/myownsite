@@ -10,7 +10,9 @@ body, html{
     box-sizing: border-box;
 }
 .parallax{
-    min-height:800px;
+    height:800px;
+    background-color:#282e34;
+    z-index: 4;
 }
 .front,.back{
     position: absolute;
@@ -29,6 +31,7 @@ body, html{
 .personalinfo{
     height:400px;
     width: auto;
+    font-size: 25px;
     text-align: left;
 }
 .personalinfo ul{
@@ -243,7 +246,22 @@ body, html{
   .line5:after{
     max-width: 75%;
   }
-  
+  @media (max-width: 300px) {
+    .wrapper{
+        max-height: auto;
+        padding: 5px 10px;
+
+    }
+    .wrapper h3{
+        max-height: auto;
+        font-size: 15px!important;
+    }
+    .line{
+        width: 200px;
+        max-height: auto;
+        padding: 5px 10px;
+    }
+  }
   @keyframes animate {
     0%{
       width: 0;
@@ -274,7 +292,6 @@ body, html{
     text-align:center;
     padding:50px 80px;
     background-color:#2284e0;
-    z-index: 3;
   }
   #section2,#section4{
     background-color:#2284e0;
@@ -287,6 +304,7 @@ body, html{
   .section-dark{
     background-color:#282e34;
     color:#ddd;
+    font-size: 25px;
   }
   
   .ptext{
@@ -344,7 +362,7 @@ body, html{
     display: none;
   }
   
-  @media (max-width: 400px) {
+  @media (width: 300px) {
     .navbar {
         max-height: auto;
         display: flexbox;
@@ -352,3 +370,4 @@ body, html{
         justify-content: space-around;
     }
   }
+}
