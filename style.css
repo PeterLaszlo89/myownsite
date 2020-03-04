@@ -2,16 +2,23 @@ body, html{
     background-color:#2284e0;
     height:100%;
     margin:0;
-    font-size:18px;
     font-family: 'Fugaz One', cursive;
     line-height:1.8em;
+    scroll-behavior: smooth;
 }
 *,*:before,*:after{
     box-sizing: border-box;
 }
-.parallax{
+.parallax{                                            /*mothafukin' parallax shit on da header*/
     height:800px;
     background-color:#282e34;
+}
+@media (max-width: 450px) {
+  .parallax{
+      height: 300px;
+      padding: 2px;
+      width: auto;
+  }
 }
 .front,.back{
     position: absolute;
@@ -24,22 +31,71 @@ body, html{
     z-index: 2;
 }
 .back{
-    top: 5%;
+    top: 7%;
     z-index: 1;
 }
+                                                    /*NAVBAR breadcrumbshit*/
+ul#breadcrumb li a{
+    display: inline;
+    font-size: 20px;
+}
+ul#breadcrumb li+li:before{
+    padding: 18px;
+    color:white;
+    content: "|\00a0";
+}
+.welcome{                                         	/*HELLO IM PETER */
+    width: 100%;
+    text-align: center;
+    padding: 3em;
+    opacity: 0.5;
+    background-image:url('img/welcome.jpg');
+    position:relative;
+    background-position:center;
+    background-size: auto;
+    background-attachment: scroll;
+    height: 400px;
+}
+.welcome_hello{
+    width: 100%;
+    padding: 3em;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    position: center;
+}
 .personalinfo{
+    padding: 3rem;
     height:400px;
     width: auto;
-    font-size: 25px;
+    font-size: 22px;
     text-align: left;
 }
 .personalinfo ul{
     float: left;
+    padding: 1em;
 }
-.selfpic{
+.selfpic img{
+    padding: 1em;
     float: right;
+    width: 250px;
+    height: auto;
 }
-#aboutme, .navbar{
+@media(max-width:450px){
+    .selfpic img{
+      display: grid;
+      width: 150px;
+      height: auto;
+  }
+    .personalinfo ul{
+
+      font-size: 20px;
+      display: grid;
+      width: 350px;
+      height: auto;
+    }
+}                                        
+#aboutme, .navbar{                                                                                  /*LOADIN ANIMATION: NAVBAR & ABOUTME->>>*/
     animation: animationFrames ease 3.5s;             /* 3.5second a fédelés ideje midnenhol*/
     animation-iteration-count: 1;
     transform-origin: 50% 50%;
@@ -71,7 +127,6 @@ body, html{
       transform:  translate(0px,0px)  ;
     }
   }
-  
   @-moz-keyframes animationFrames{
     0% {
       opacity:0;
@@ -115,36 +170,12 @@ body, html{
       -ms-transform:  translate(0px,0px)  ;
     }
   }
-  
-  /*  KÁSZTÖMTOGGLER
-  
-  .custom-toggler.navbar-toggler {
-    height: 50px;
-    width: 80px;
-    border-color:#2284e0;
-    border-width: 3px;
-    border-inline-start-width: 0px;
-    border-inline-end-width: 0px;
-  }
 
-  */
-
-  /*.navbar-toggler-icon {
-    background-image: url("img/profilekep3.png");
-    opacity: 60%;
-    min-width:85px;
-    max-height: auto;
-    float:inline-end;
-  }
-  */
-  #navbar{
-    text-decoration: none;
-}
   .scrolled{
     background-color:#2284e0;
     transition: background-color 700ms ease-in-out;
   }
-
+                                                                                                      /*<<<-LOADIN ANIMATION: NAVBAR & ABOUTME*/
 
   @media (max-width: 400px) {
     .navbar {
@@ -154,8 +185,8 @@ body, html{
         justify-content: space-around;
     }
   }
-  
-  .pimg2{
+
+  .pimg2{                                                       /* pimg2 & pimg4 */
     position:relative;
     opacity:0.7;
     background-image:url('img/image2.jpg');
@@ -164,7 +195,6 @@ body, html{
     background-size: auto;
     background-attachment: scroll;
   }
-
   .pimg4{
     position:relative;
     opacity:0.7;
@@ -172,40 +202,80 @@ body, html{
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment:fixed;
-    /*
-      fixed = parallax
-      scroll = normal
-    */
+    /*fixed = parallax scroll = normal*/
   }
-  #skillz{                                  /*Contains: WRAPPER & skillz1*/
+  @media(max-width:450px){
+    .pimg2,.pimg4{
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: auto;
+      min-height:200px!important;
+  }
+}
+  #skillz{                                                    /*Contains: WRAPPER & skillz1*/
+    display: flex;
     width: 100%;
-    height: 800px;
+    height: 700px;
     padding: 60px;
     margin:0 auto;
+    font-size: 22px;
   }
-  .wrapper{
-    /*background-image:url('img/image3.jpg');*/
+
+  @media (max-width: 450px) {
+    #skillz{
+        display: grid;
+        height: 1080px;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+  }
+  .wrapper{                                                     /* WRAPPER */
     height:auto;
     width: 550px;
     padding: 25px;
     float: left;
     margin:0px;
   }
+  @media (max-width: 450px) {
+    .wrapper{
+        height: auto;
+        padding: 5px 10px;
+        width: 350px;
+    }
+  }
   .wrapper h3{
     color: white;
     text-align: left;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: 15px;
   }
-  .line{
+  @media (max-width: 450px) {
+    .wrapper h3{
+      width: 40%;
+      max-height: auto;
+      font-size: 15px;
+    }
+  }
+  .line{                                                      /* SKILLZ  LINE  */
     height: 30px;
-    min-width: 500px;
+    width: 500px;
     margin:0 auto 10px;
     line-height: 30px;
     font-size: 20px;
     color: white;
     padding:0 0 0 10px;
     position: relative;
+  }
+  @media (max-width: 450px) {
+    .line{
+      position: relative;
+      float: left;
+      width: 70%;
+        max-width: 300px;
+        max-height: auto;
+        padding: 5px 10px;
+        position: relative;
+    }
   }
   .line:before{
     content: '';
@@ -217,7 +287,7 @@ body, html{
     z-index: -2;
     background:white;
   }
-  .line:hover:after{
+  .line:after{
     content: '';
     background:#36abff;
     height: 30px;
@@ -245,23 +315,8 @@ body, html{
   .line5:after{
     max-width: 75%;
   }
-  @media (max-width: 300px) {
-    .wrapper{
-        max-height: auto;
-        padding: 5px 10px;
 
-    }
-    .wrapper h3{
-        max-height: auto;
-        font-size: 15px!important;
-    }
-    .line{
-        width: 200px;
-        max-height: auto;
-        padding: 5px 10px;
-    }
-  }
-  @keyframes animate {
+  @keyframes animate {										 /* SKILLZ LINES ANIMATION */
     0%{
       width: 0;
     }
@@ -269,17 +324,26 @@ body, html{
       width:100%;
     }
   }
-  .skillz1{
+  .skillz1{                                                   /* SKILLZ 1 */
     color: white;
-    position: relative;
     display: block;
     float: right;
-    width: 750px;
-    height:700px;
-    padding: 25px;
+    width: 500px;
+    height:auto;
+    padding: 30px;
     text-align: left;
   }
-
+  @media (max-width: 450px) {
+    .skillz1{
+    
+      position: relative;
+      display: block;
+      width: 300px;
+      height:auto;
+      padding: 20px;
+      text-align: center;
+    }
+  }
   .pimg4{
     background-image:url('img/image4.jpg');
     min-height:400px;
@@ -292,18 +356,19 @@ body, html{
     padding:50px 80px;
     background-color:#2284e0;
   }
-  #section2,#section4{
+  #section2,#section4{                                        /*SECTION2 & SECTION4*/
     background-color:#2284e0;
   }
-  /*.section-light{
-    background-color:#f4f4f4;
-    color:#666;
-  }*/
-  
   .section-dark{
     background-color:#282e34;
     color:#ddd;
     font-size: 25px;
+  }
+  @media (max-width: 450px) {
+    #section2,#section4,.section-dark{
+      font-size: 16px;
+      padding: 2em;
+    }
   }
   
   .ptext{
@@ -333,7 +398,7 @@ body, html{
     background-attachment: fixed;
     background-size: cover;
   }
-  .footer{
+  .footer{                                                      /*FOOTER*/
     color: ivory;
     font-size: 20px;
   }
@@ -350,21 +415,6 @@ body, html{
   #backtonav{
     color: white;
   }
-  
-  @media(max-width:560px){
-    .pimg2,.pimg4{
-      background-size: contain;
-      background-repeat: no-repeat;
-  }  
-  @media (width: 300px) {
-    .navbar {
-        max-height: auto;
-        display: flexbox;
-        padding: 5px 10px;
-        justify-content: space-around;
-    }
-  }
-}
-#website{
+#website{                                                       /*WEBSITE FADEIN JS SHIT*/   
   display: none;
 }
