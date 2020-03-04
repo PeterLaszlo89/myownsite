@@ -1,3 +1,5 @@
+
+
 $(function(){
 
     $("#website").fadeIn(1200);
@@ -9,12 +11,28 @@ $(function(){
         $(navbar).toggleClass("scrolled", $(this).scrollTop() > 420);
 
     });
-    
-});
+
+    window.sr = ScrollReveal();
+    sr.reveal('#skillz div', {
+      delay:1500,
+      duration: 1500,
+      origin:'left',
+      distance:'300px',
+      viewFactor:0.2
+    });
+
+    $("#skillzbutton").on("click", function(){
+
+        var skillzbutton = document.getElementById("skillz");
+
+        skillzbutton.scrollIntoView({
+            block: "end"});
+        });
+    });
 
 //parallax
 
-window.onload = function(){                    
+    window.onload = function(){                    
     lax.setup() // init
 
     const updateLax = () => {
