@@ -22,13 +22,20 @@
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <ul class="navbar-nav ml-auto" id="breadcrumb">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Me<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" id="skillzbutton" href="#">Skillz</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">References</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Info & Contact<span class="sr-only">(current)</span></a>
+            </li>
+          <!--   DROPDOWN MENU LIST
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
@@ -40,31 +47,28 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+          -->
           </ul>
         </div>
       </nav>
  
     </header>
-    
-    <!-- Animált logo
-    <div class="pimg1">
-      <div class="logo">
-        <a href="https://www.deviantart.com/bobbyfiu23"><image src="img/logo_3d.png"></a>
-      </div>
-    </div>
-    -->
     <div class="parallax">
-      <img src="img/front.png" class="front lax" data-lax-translate-y="0 1, 300 -100">
-      <img src="img/back.png" class="back lax" data-lax-translate-y="0 0, 400 -80">
+      <img src="img/front.png" class="front lax" data-lax-translate-y="0 0, 280 -100">
+      <img src="img/back.png" class="back lax" data-lax-translate-y="0 1, 400 -80">
+    </div>
+    
+    <div class="welcome">
+      <div>
+      </div>
+      <div class="welcome_hello">
+        <h1>Hello, Im Peter</h1>
+        <h2>Webdesigner</h2>
+      </div>
     </div>
     
       <section class="section section-dark">
         <div id="aboutme">
-        <h1>Hello, Im Peter Laszlo</h1>
-        <h2>Webdesigner</h2>
           <div class="personalinfo">
             <div class="selfpic">
               <a href="#" class="profilkep2"><img src="img/selfpic.png" style="position: relative" img width="auto" height="350px"></a>
@@ -105,10 +109,10 @@
       <div id="skillz">
         <div class="wrapper">
         
-          <h3>HTML / CSS</h3>
-          <!--<a class="profilkep2"><img src="img/htmlcss.png"></a>-->
+          <h3>HTML & CSS</h3>
+          <!--<a class="skilllogo" style="width: 24px;height: auto;"><img src="img/HTMLCSS.png"></a>-->
             <div class="line line1">85%</div>
-          <h3>JAVASCRIPT</h3>
+          <h3>JAVASCRIPT & BOOTSRAP</h3>
             <div class="line line2">50%</div>
           <h3>PHOTOSHOP</h3>
             <div class="line line3">95%</div>
@@ -145,10 +149,10 @@
         <h2>Professional references</h2>
         <br>
         <p>
-          Backend developer:Zoltán Elek emailhelye
+          Front-End developer,Attila Blascsák - attila.blascsak@gmail.com
         </p>
         <p>
-          Frontened developer:Attila Blascsák emailhelye
+          Back-End developer,Zoltán Elek - efhenrir@gmail.com
         </p>
       </section>
 
@@ -164,6 +168,7 @@
                                 <hr>
                                 <div>
                                     <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true" id="backtonav"></i>&nbsp;</a>
+                                    <p class="copyright mt-5 mb-3">&copy; 2020 version 1.01</p>
                                 </div>
                             </p>
                     </div>
@@ -171,14 +176,11 @@
         </div>
     </footer>
 
-
-    
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+<script src="https://unpkg.com/scrollreveal"></script>      <!--SCROLLREVEAL-->
 <script src="script.js"></script>
 </script>
 </body>
