@@ -44,12 +44,18 @@ ul#breadcrumb li+li:before{
     color:white;
     content: "|\00a0";
 }
+@media (max-width: 550px) {
+  
+  ul#breadcrumb li+li:before{
+      display: none;
+  }
+}
 .welcome{                                         	/*HELLO IM PETER */
     width: 100%;
     text-align: center;
     padding: 3em;
-    opacity: 0.5;
-    background-image:url('img/welcome.png');
+    opacity: 0.8;
+    background-image:url('img/welcome.jpg');
     position:relative;
     background-position:center;
     background-size: auto;
@@ -61,10 +67,11 @@ ul#breadcrumb li+li:before{
     padding: 3em;
     text-align: center;
     color: white;
-    opacity: 1;
     position: center;
 }
 .personalinfo{
+    display:flexbox;
+    position: relative;
     padding: 3rem;
     height:400px;
     width: auto;
@@ -72,29 +79,39 @@ ul#breadcrumb li+li:before{
     text-align: left;
 }
 .personalinfo ul{
-    float: left;
-    padding: 1em;
+    margin: 0;
+    height: 350px;
+    float: right;
 }
 .selfpic img{
     padding: 1em;
-    float: right;
-    width: 250px;
+    float: left;
+    width: 320px;
     height: auto;
 }
-@media(max-width:450px){
+@media(max-width:550px){
     .selfpic img{
       display: grid;
-      width: 150px;
+      width: 200px;
       height: auto;
   }
     .personalinfo ul{
-
-      font-size: 20px;
+      padding: 20px;
+      font-size: 16px;
       display: grid;
-      width: 350px;
+      width: 300px;
       height: auto;
     }
-}                                        
+    .personalinfo{
+      display: relative;
+      height:600px;
+      width: auto;
+      padding: 20px;
+    }
+}
+#aboutme{
+    padding: 20px;
+}                                    
 #aboutme, .navbar{                                                                                  /*LOADIN ANIMATION: NAVBAR & ABOUTME->>>*/
     animation: animationFrames ease 3.5s;             /* 3.5second a fédelés ideje midnenhol*/
     animation-iteration-count: 1;
@@ -414,6 +431,11 @@ ul#breadcrumb li+li:before{
   }
   #backtonav{
     color: white;
+  }
+
+  .hr-style{
+    border-top: 1px solid white;
+    opacity: 0.5;
   }
 #website{                                                       /*WEBSITE FADEIN JS SHIT*/   
   display: none;
