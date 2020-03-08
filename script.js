@@ -26,7 +26,28 @@ $(function(){
         var skillzbutton = document.getElementById("skillz");
 
         skillzbutton.scrollIntoView({
-            block: "end"});
+            block: "start"});
+    });
+    $("#aboutmebutton").on("click", function(){
+
+        var aboutmebutton = document.getElementById("aboutme");
+
+        aboutmebutton.scrollIntoView({
+            block: "start"});
+        });
+    $("#referencebutton").on("click", function(){
+
+        var referencebutton = document.getElementById("scroll_reference");
+    
+        referencebutton.scrollIntoView({
+            block: "start"});
+        });
+    $("#infobutton").on("click", function(){
+
+        var infobutton = document.getElementById("scroll_info");
+        
+        infobutton.scrollIntoView({
+            block: "start"});
         });
     });
 
