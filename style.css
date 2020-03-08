@@ -240,8 +240,9 @@ ul#breadcrumb li+li:before{
 
   @media (max-width: 450px) {
     #skillz{
-        display: grid;
-        height: 1080px;
+        display: flex;
+        height: 880px;
+        width: 100%;
         padding: 5px 10px;
         font-size: 16px;
     }
@@ -255,9 +256,10 @@ ul#breadcrumb li+li:before{
   }
   @media (max-width: 450px) {
     .wrapper{
+        float: right;
         height: auto;
         padding: 5px 10px;
-        width: 350px;
+        width: 300px;
     }
   }
   .wrapper h3{
@@ -268,7 +270,7 @@ ul#breadcrumb li+li:before{
   }
   @media (max-width: 450px) {
     .wrapper h3{
-      width: 40%;
+      width: 80%;
       max-height: auto;
       font-size: 15px;
     }
@@ -287,7 +289,7 @@ ul#breadcrumb li+li:before{
     .line{
       position: relative;
       float: left;
-      width: 70%;
+      width: 80%;
       max-width: 300px;
       max-height: auto;
       padding: 5px 10px;
@@ -352,13 +354,38 @@ ul#breadcrumb li+li:before{
   }
   @media (max-width: 450px) {
     .skillz1{
-    
-      position: relative;
-      display: block;
-      width: 300px;
+      position: absolute;
+      padding-top: 450px;
+      width: 400px;
       height:auto;
-      padding: 20px;
       text-align: center;
+    }
+  }
+  .proglogos{                                                   /* SKILLZ 1 */
+    color: white;
+    display: block;
+    float: right;
+    width: 150px;
+    height:auto;
+    padding: 30px;
+    text-align: left;
+  }
+  .logos img{
+    padding: 15px;
+  }
+  @media (max-width: 450px) {
+    .proglogos{
+      float: left;
+      display: block;
+      width: 100px;
+      height:auto;
+      padding: 5px;
+      text-align: center;
+    }
+    .logos img{
+      width: 80px;
+      height: auto;
+      padding: 5px;
     }
   }
   .pimg4{
@@ -437,6 +464,6 @@ ul#breadcrumb li+li:before{
     border-top: 1px solid white;
     opacity: 0.5;
   }
-#website{                                                       /*WEBSITE FADE IN JS SHIT*/   
+#website{                                                       /*WEBSITE FADEIN JS SHIT*/   
   display: none;
 }
