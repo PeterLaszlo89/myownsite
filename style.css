@@ -437,6 +437,6 @@ ul#breadcrumb li+li:before{
     border-top: 1px solid white;
     opacity: 0.5;
   }
-#website{                                                       /*WEBSITE FADEIN JS SHIT*/   
+#website{                                                       /*WEBSITE FADE IN JS SHIT*/   
   display: none;
 }
