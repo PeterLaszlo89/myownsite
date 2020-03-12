@@ -1,5 +1,3 @@
-
-
 $(function(){
 
     $("#website").fadeIn(1200);
@@ -63,4 +61,3 @@ $(function(){
 
     window.requestAnimationFrame(updateLax)
 }
-
