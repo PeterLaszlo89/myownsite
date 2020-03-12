@@ -11,6 +11,7 @@ body, html{
 }
 .parallax{                                            /*mothafukin' parallax shit on da header*/
     height:800px;
+    width: auto;
     background-color:#282e34;
 }
 @media (max-width: 450px) {
@@ -33,6 +34,18 @@ body, html{
 .back{
     top: 7%;
     z-index: 1;
+}
+@media (max-width: 450px) {
+  .front{
+      height: auto;
+      padding: 2px;
+      width: 450px;
+  }
+  .back{
+    height: auto;
+    padding: 2px;
+    width: 450px;
+  }
 }
                                                     /*NAVBAR breadcrumbshit*/
 ul#breadcrumb li a{
@@ -63,11 +76,17 @@ ul#breadcrumb li+li:before{
     height: 400px;
 }
 .welcome_hello{
-    width: 100%;
-    padding: 3em;
+    font-size:50px;
+    padding: 1em;
     text-align: center;
     color: white;
     position: center;
+}
+@media (max-width: 450px) {
+  .welcome_hello{
+    font-size: 30px;
+    padding: 20px;
+  }
 }
 .personalinfo{
     display:flexbox;
