@@ -37,14 +37,16 @@ body, html{
 }
 @media (max-width: 450px) {
   .front{
+      top: 13%;
       height: auto;
       padding: 2px;
-      width: 450px;
+      width: 400px;
   }
   .back{
-    height: auto;
-    padding: 2px;
-    width: 450px;
+      top: 10%;
+      height: auto;
+      padding: 2px;
+      width: 400px;
   }
 }
                                                     /*NAVBAR breadcrumbshit*/
