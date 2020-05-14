@@ -1,5 +1,5 @@
 body, html{
-    background-color:#2284e0;
+    background-color:#00538a;
     height:100%;
     margin:0;
     font-family: 'Fugaz One', cursive;
@@ -15,6 +15,13 @@ body, html{
     background-color:#282e34;
 }
 @media (max-width: 450px) {
+  .parallax{
+      height: 300px;
+      padding: 2px;
+      width: auto;
+  }
+}
+@media (max-width: 550px) {
   .parallax{
       height: 300px;
       padding: 2px;
@@ -37,16 +44,16 @@ body, html{
 }
 @media (max-width: 450px) {
   .front{
-      top: 13%;
-      height: auto;
-      padding: 2px;
-      width: 400px;
+    top: 13%;
+    height: auto;
+    padding: 2px;
+    width: 400px;
   }
   .back{
-      top: 10%;
-      height: auto;
-      padding: 2px;
-      width: 400px;
+    top: 10%;
+    height: auto;
+    padding: 2px;
+    width: 400px;
   }
 }
                                                     /*NAVBAR breadcrumbshit*/
@@ -68,15 +75,16 @@ ul#breadcrumb li+li:before{
 .welcome{                                         	/*HELLO IM PETER */
     width: 100%;
     text-align: center;
-    padding: 3em;
-    opacity: 0.8;
+    padding: 2rem;
+    opacity: 1;
     background-image:url('img/welcome.jpg');
     position:relative;
     background-position:center;
     background-size: auto;
     background-attachment: scroll;
-    height: 400px;
+    height:360px;
 }
+
 .welcome_hello{
     font-size:50px;
     padding: 1em;
@@ -85,51 +93,84 @@ ul#breadcrumb li+li:before{
     position: center;
 }
 @media (max-width: 450px) {
+  
   .welcome_hello{
-    font-size: 30px;
-    padding: 20px;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+  }
+}
+@media (max-width: 550px) {
+  
+  .welcome_hello{
+    width: 100%;
+    height: auto;
+    font-size: 35px;
+  }
+}
+@media (max-width: 750px) {
+  
+  .welcome_hello{
+    width: 100%;
+    height: auto;
   }
 }
 .personalinfo{
-    display: flex;
+  display: flex;
     justify-content: center;
     position: relative;
     padding: 3rem;
     height:400px;
-    width: auto;
+    width: 100%;
     font-size: 22px;
     text-align: left;
 }
-.personalinfo ul{
-    margin: 0;
-    height: 350px;
-    float: right;
-}
-.selfpic img{
-    padding: 1em;
-    float: left;
-    width: 320px;
-    height: auto;
-}
-@media(max-width:550px){
+
+@media(max-width:450px){
     .selfpic img{
       display: grid;
       width: 200px;
       height: auto;
   }
     .personalinfo ul{
+    display: flex;
+    flex-direction: column;
       padding: 20px;
       font-size: 16px;
-      display: grid;
       width: 300px;
       height: auto;
     }
     .personalinfo{
+    display: flex;
+    flex-direction: column;
       display: relative;
       height:600px;
       width: auto;
       padding: 20px;
     }
+}
+@media(max-width:550px){
+  .selfpic img{
+    display: grid;
+    width: 200px;
+    height: auto;
+}
+  .personalinfo ul{
+  display: flex;
+  flex-direction: column;
+    padding: 20px;
+    font-size: 16px;
+    width: 300px;
+    height: auto;
+  }
+  .personalinfo{
+  display: flex;
+  flex-direction: column;
+    display: relative;
+    height:600px;
+    width: auto;
+    padding: 20px;
+  }
 }
 #aboutme{
     padding: 20px;
@@ -211,7 +252,7 @@ ul#breadcrumb li+li:before{
   }
 
   .scrolled{
-    background-color:#2284e0;
+    background-color:#00538a;
     transition: background-color 700ms ease-in-out;
   }
                                                                                                       /*<<<-LOADIN ANIMATION: NAVBAR & ABOUTME*/
@@ -227,16 +268,18 @@ ul#breadcrumb li+li:before{
 
   .pimg2{                                                       /* pimg2 & pimg4 */
     position:relative;
-    opacity:0.7;
+    opacity:0.8;
     background-image:url('img/image2.jpg');
-    min-height:800px;
+    min-height:600px;
+    width: auto;
     background-position:center;
-    background-size: auto;
     background-attachment: scroll;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .pimg4{
     position:relative;
-    opacity:0.7;
+    opacity:0.8;
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
@@ -248,8 +291,16 @@ ul#breadcrumb li+li:before{
       background-size: contain;
       background-repeat: no-repeat;
       width: auto;
-      min-height:200px!important;
+      height: auto;
   }
+}
+@media(max-width:550px){
+  .pimg2,.pimg4{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+}
 }
   #skillz{                                                    /*Contains: WRAPPER & skillz1*/
     display: flex;
@@ -270,6 +321,17 @@ ul#breadcrumb li+li:before{
         font-size: 16px;
     }
   }
+
+  @media (max-width: 550px) {
+    #skillz{
+        display: flex;
+        height: 980px;
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+  }
+
   .wrapper{                                                     /* WRAPPER */
     height:auto;
     width: 550px;
@@ -278,6 +340,14 @@ ul#breadcrumb li+li:before{
     margin:0px;
   }
   @media (max-width: 450px) {
+    .wrapper{
+        float: right;
+        height: auto;
+        padding: 5px 10px;
+        width: 300px;
+    }
+  }
+  @media (max-width: 550px) {
     .wrapper{
         float: right;
         height: auto;
@@ -298,6 +368,13 @@ ul#breadcrumb li+li:before{
       font-size: 15px;
     }
   }
+  @media (max-width: 550px) {
+    .wrapper h3{
+      width: 80%;
+      max-height: auto;
+      font-size: 15px;
+    }
+  }
   .line{                                                      /* SKILLZ  LINE  */
     height: 30px;
     width: 500px;
@@ -309,6 +386,17 @@ ul#breadcrumb li+li:before{
     position: relative;
   }
   @media (max-width: 450px) {
+    .line{
+      position: relative;
+      float: left;
+      width: 80%;
+      max-width: 300px;
+      max-height: auto;
+      padding: 5px 10px;
+      position: relative;
+    }
+  }
+  @media (max-width: 550px) {
     .line{
       position: relative;
       float: left;
@@ -384,6 +472,15 @@ ul#breadcrumb li+li:before{
       text-align: center;
     }
   }
+  @media (max-width: 550px) {
+    .skillz1{
+      position: absolute;
+      padding-top: 450px;
+      width: 400px;
+      height:auto;
+      text-align: center;
+    }
+  }
   .proglogos{                                                   /* SKILLZ 1 */
     color: white;
     display: block;
@@ -411,6 +508,21 @@ ul#breadcrumb li+li:before{
       padding: 5px;
     }
   }
+  @media (max-width: 550px) {
+    .proglogos{
+      float: left;
+      display: block;
+      width: 100px;
+      height:auto;
+      padding: 5px;
+      text-align: center;
+    }
+    .logos img{
+      width: 80px;
+      height: auto;
+      padding: 5px;
+    }
+  }
   .pimg4{
     background-image:url('img/image4.jpg');
     min-height:400px;
@@ -421,10 +533,10 @@ ul#breadcrumb li+li:before{
     width: 100%;
     text-align:center;
     padding:50px 80px;
-    background-color:#2284e0;
+    background-color:#00538a;
   }
   #section2,#section4{                                        /*SECTION2 & SECTION4*/
-    background-color:#2284e0;
+    background-color:#00538a;
   }
   .section-dark{
     background-color:#282e34;
@@ -432,6 +544,18 @@ ul#breadcrumb li+li:before{
     font-size: 25px;
   }
   @media (max-width: 450px) {
+    #section2,#section4,.section-dark{
+      font-size: 16px;
+      padding: 2em;
+    }
+  }
+  @media (max-width: 550px) {
+    #section2,#section4,.section-dark{
+      font-size: 16px;
+      padding: 2em;
+    }
+  }
+  @media (max-width: 650px) {
     #section2,#section4,.section-dark{
       font-size: 16px;
       padding: 2em;
@@ -461,7 +585,7 @@ ul#breadcrumb li+li:before{
   }
   .container-fluid{
     padding-bottom: 60px;
-    background-image: url(img/footer_bg.jpg);
+    background-image: url(img/footer_bg.png);
     background-attachment: fixed;
     background-size: cover;
   }
@@ -484,8 +608,11 @@ ul#breadcrumb li+li:before{
   }
 
   .hr-style{
-    border-top: 1px solid white;
-    opacity: 0.5;
+    margin:1rem auto;
+  border: 0;
+  height: 2px;
+  color: white;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
   }
 #website{                                                       /*WEBSITE FADEIN JS SHIT*/   
   display: none;

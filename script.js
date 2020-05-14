@@ -12,7 +12,7 @@ $(function(){
 
     window.sr = ScrollReveal();
     sr.reveal('#skillz div', {
-      delay:1500,
+      delay:750,
       duration: 1500,
       origin:'left',
       distance:'300px',
