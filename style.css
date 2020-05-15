@@ -267,21 +267,23 @@ ul#breadcrumb li+li:before{
   }
 
   .pimg2{                                                       /* pimg2 & pimg4 */
-    position:relative;
-    opacity:0.8;
     background-image:url('img/image2.jpg');
-    min-height:600px;
-    width: auto;
-    background-position:center;
-    background-attachment: scroll;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .pimg4{
     position:relative;
     opacity:0.8;
+    height:450px;
     background-position:center;
     background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    /*fixed = parallax scroll = normal*/
+  }
+  .pimg4{
+    background-image:url('img/image4.jpg');
+    position:relative;
+    opacity:0.8;
+    height:400px;
+    background-position:center;
+    background-size: cover;
     background-repeat:no-repeat;
     background-attachment:fixed;
     /*fixed = parallax scroll = normal*/
@@ -291,7 +293,7 @@ ul#breadcrumb li+li:before{
       background-size: contain;
       background-repeat: no-repeat;
       width: auto;
-      height: auto;
+      height:300px;
   }
 }
 @media(max-width:550px){
@@ -299,7 +301,15 @@ ul#breadcrumb li+li:before{
     background-size: contain;
     background-repeat: no-repeat;
     width: auto;
-    height: auto;
+    height:300px;
+}
+}
+@media(max-width:650px){
+  .pimg2,.pimg4{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height:300px;
 }
 }
   #skillz{                                                    /*Contains: WRAPPER & skillz1*/
@@ -522,11 +532,6 @@ ul#breadcrumb li+li:before{
       height: auto;
       padding: 5px;
     }
-  }
-  .pimg4{
-    background-image:url('img/image4.jpg');
-    min-height:400px;
-    background-size: contain;
   }
   .section{
     height: auto;
