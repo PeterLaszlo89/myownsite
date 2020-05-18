@@ -47,13 +47,13 @@ body, html{
     top: 13%;
     height: auto;
     padding: 2px;
-    width: 400px;
+    width: 100%;
   }
   .back{
     top: 10%;
     height: auto;
     padding: 2px;
-    width: 400px;
+    width: 100%;
   }
 }
                                                     /*NAVBAR breadcrumbshit*/
