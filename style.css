@@ -289,7 +289,9 @@ ul#breadcrumb li+li:before{
         justify-content: space-around;
     }
   }
-
+  .navbar a{
+    cursor:pointer;
+  }
   @media (max-width: 450px) {
     .nav-item a{
         opacity: 1;
