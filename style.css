@@ -60,12 +60,23 @@ body, html{
 }
   @media screen and (max-width: 550px) {
   .front{
-    margin-top: 28%;
+    margin-top: 26%;
     height: auto;
     width: 100%;
   }
   .back{
     margin-top:20%;
+    width: 100%; 
+  }
+}
+@media screen and (max-width: 980px) {
+  .front{
+    margin-top: 20%;
+    height: auto;
+    width: 100%;
+  }
+  .back{
+    margin-top:16%;
     width: 100%; 
   }
 }
