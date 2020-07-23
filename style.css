@@ -340,7 +340,7 @@ ul#breadcrumb li+li:before{
     transform: translate(-50%,-50%);
 }
 .navbar-toggler {
-    margin-right: -40px;
+    margin-right: -60px;
 }
 
 /* Style the btn div element, by setting its width, height and box-shadow
