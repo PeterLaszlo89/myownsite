@@ -332,6 +332,85 @@ ul#breadcrumb li+li:before{
     }
   }
 
+  .burgermenu{
+    position: absolute;
+    float: right;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+}
+.navbar-toggler {
+    margin-right: -40px;
+}
+
+/* Style the btn div element, by setting its width, height and box-shadow
+  and set its position value to relative so that we can move its child elements easily.  
+*/
+.btn{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity:1;
+}
+
+/* Now style the three divs inside btn div, by setting it width, height and position value
+to absolute, so that we can place three divs wherever we want. */
+.btn div{
+    width: 30px;
+    height: 5px;
+    background: #ecf0f1;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+/* Now position the three divs accordingly by using top and left properties. */
+.btn .first{
+    top: 15px;
+    left: 20px;
+}
+
+.btn .second{
+    top: 25px;
+    left: 20px;
+}
+
+.btn .third{
+    top: 35px;
+    left: 20px;
+}
+
+
+/* Toggle active class, whenever active class gets added to the existing btn class
+toggle hamburger button effect occures. */
+.btn.active .first{
+    transform: translate(0px, 20px) rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.btn.active .second{
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+/* here the third divs opacity becomes zero, whenever active class gets added to 
+the existing btn class and for making the effect fast, set its transition-time to 0.2s.*/
+.btn.active .third{
+    transform: translate(0px, 0px) rotate(-45deg);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* whenever active class gets added to the existing btn class 
+and the normal hamburger button becomes the circular hamburger button. */
+.btn.active{
+    border-radius: 50%;
+    transform: rotate(360deg);
+    /* Use transition property for smooth transition effect */
+    transition: all 0.3s ease;
+}
+
 
   .pimg2{                                                       /* pimg2 & pimg4 */
     background-image:url('img/image2.jpg');

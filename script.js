@@ -6,7 +6,7 @@ $(function(){
 
         var navbar = $("#navbar");
 
-        $(navbar).toggleClass("scrolled", $(this).scrollTop() > 420);
+        $(navbar).toggleClass("scrolled", $(this).scrollTop() > 120);
 
     });
 
@@ -47,7 +47,12 @@ $(function(){
         infobutton.scrollIntoView({
             block: "start"});
         });
-    });
+    $(".btn").click(function(){
+            $(this).toggleClass("active");
+          });
+
+});
+    
 
 //parallax
 
